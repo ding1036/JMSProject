@@ -1,23 +1,23 @@
 
-####find activemq/bin catagroy and start mq
+#### find activemq/bin catagroy and start mq
 ```
 sudo ./activemq start
 ```
-####find error as below:<br>
+#### find error as below:<br>
 ERROR: Configuration variable JAVA_HOME or JAVACMD is not defined   
 correctly.   
 (JAVA_HOME=’ ’ , JAVACMD=’Java’)  
 
-####solve:<br>
+#### solve:<br>
 find JAVA_HOME path didn't work，just need to add code in activemq file at the very beginning manually.
 ```
     JAVA_HOME="/home/emin/Downloads/jdk-9.0.4"  
     export JAVA_HOME  
 ```
 
-####default port : 8161
+#### default port : 8161
 
-####find conf file in Tomcat install path，add below config to context.xml:<br>
+#### find conf file in Tomcat install path，add below config to context.xml:<br>
 ```
 <Resource name="queue/connectionFactory"    
                 auth="Container"    
